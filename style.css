@@ -1,7 +1,72 @@
 /*
-Theme name:Beverage Bar
-Author:Ensar Pushkolli
-Description:The Beverage Bar web theme is a very helpful,modern,easy-going and responsive theme with a chill vibe 
-Version:1.0
-Tgs:Cool,relaxed,chill,modern,green,responsive
+Theme Name: Daily Brew
+Theme URI:  https://example.com/beverage-bar
+Author: Ensar Pushkolli
+Author URI: https://example.com
+Description: A lightweight responsive theme for a tea/coffee site.
+Version: 1.0
+Tags: modern, responsive, cafe, drinks, green, organic
+Text Domain: project-wp
 */
+
+:root {
+  --bg:#faf7f2;
+  --accent:#2f6f4e;
+  --accent-2:#b08b57;
+  --muted:#6b6b6b;
+  --max-width:1100px;
+}
+
+/* Reset / base */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; background: var(--bg); color: #111; }
+a { color: var(--accent); text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Header */
+.site-header { position: sticky; top:0; z-index:50; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); padding:1rem 1.25rem; }
+.site-header .navbar > .container { position: relative; justify-content: center; }
+
+/* Brand */
+.site-header .navbar .navbar-brand { position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); z-index: 5; font-weight:700; font-size:1.125rem; color: var(--accent); }
+
+/* Navbar links */
+.site-header .navbar .collapse.navbar-collapse { flex: 1 1 100%; display: flex; justify-content: center; }
+.site-header .navbar .navbar-nav { margin: 0; display: flex; justify-content: center; gap: 1rem; }
+.site-header .navbar .navbar-nav .nav-link { padding: .35rem .5rem; border-radius: 6px; }
+.site-header .navbar .navbar-nav .nav-link:hover { background: rgba(47,111,78,0.06); }
+
+/* Hero / page content */
+.hero { max-width: var(--max-width); margin: 1.25rem auto; }
+.hero-banner { width: 100%; border-radius: 8px; box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+
+.features, .section-pad { max-width: var(--max-width); margin: 1.5rem auto; padding: 0 1rem; }
+.features h2, #heading { color: var(--accent); margin-bottom: .5rem; }
+.theme-card { background:#fff; padding:1rem; border-radius:8px; box-shadow: 0 4px 14px rgba(16,24,40,0.04); }
+
+.blog-list, .single-posts, main { max-width: var(--max-width); margin:1.25rem auto; padding:0 1rem; }
+.blog-item { background:#fff; padding:1rem; border-radius:8px; margin-bottom:1rem; }
+.entry-title, .blog-item-title { margin:.25rem 0; color: var(--accent); }
+
+.site-footer { background:#fff; padding:1rem; text-align:center; margin-top:2rem; border-top:1px solid rgba(0,0,0,0.04); }
+.site-footer p { margin:.35rem 0; color: var(--muted); }
+
+/* Sidebar */
+.widget { background:#fff; padding:1rem; border-radius:8px; margin-bottom:1rem; }
+
+/* Team grid */
+.team-grid { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+.team-card { background:#fff; padding:1rem; border-radius:8px; }
+
+/* Utility */
+.section-pad { padding-top:1rem; padding-bottom:1rem; }
+.card-points { margin-left:auto; margin-right:auto; display:inline-block; text-align:center; }
+
+/* Accessibility */
+a:focus { outline: 3px solid rgba(47,111,78,0.2); outline-offset:2px; }
+
+/* Responsive adjustments */
+@media (max-width:767px){
+  .site-header .navbar .navbar-brand { position: static; transform: none; }
+  .site-header .navbar .collapse.navbar-collapse { flex-basis: auto; }
+}
